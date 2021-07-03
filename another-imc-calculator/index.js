@@ -4,6 +4,7 @@ addEventListener("fetch", (event) => {
         const response = new Response(null, { status: 405, statusText: "Method Not Allowed" });
         return event.respondWith(response);
     }
+
     const urlParams = event.request.url.split('?');
     const params = new URLSearchParams(urlParams[1]);
     if (!params.has('peso') || !params.has('altura')) {
