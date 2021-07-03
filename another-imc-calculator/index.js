@@ -4,7 +4,7 @@ addEventListener("fetch", (event) => {
         return event.respondWith(
             new Response(null, {
                 status: 405,
-                statusText: "Method Not Allowed",
+                statusText: "Method Not Allowed"
             })
         );
     }
