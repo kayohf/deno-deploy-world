@@ -1,12 +1,7 @@
 addEventListener("fetch", (event) => {
 
     if (event.request.method !== "GET") {
-        const response = new Response(null, {
-            status: 405,
-            statusText: "Method Not Allowed"
-        }
-        );
-
+        const response = new Response(null, { status: 405, statusText: "Method Not Allowed" });
         return event.respondWith(response);
     }
 
